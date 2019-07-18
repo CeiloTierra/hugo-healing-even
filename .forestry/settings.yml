@@ -7,7 +7,6 @@ sections:
 - type: document
   path: welcome-to-forestry.md
   label: Welcome to Forestry
-  match: "**/*"
   read_only: true
 - type: heading
   label: Content
@@ -26,4 +25,12 @@ public_path: "/uploads"
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
-version: '0.48'
+build:
+  preview_command: vuepress build -d .vuepress/dist
+  publish_command: vuepress build -d .vuepress/dist
+  preview_output_directory: ".vuepress/dist"
+  output_directory: ".vuepress/dist"
+  instant_preview_command: vuepress dev -p 8080 -h 0.0.0.0
+  install_dependencies_command: yarn install
+  preview_docker_image: node:10
+  mount_path: "/srv"

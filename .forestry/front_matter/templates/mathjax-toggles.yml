@@ -1,7 +1,6 @@
 ---
 label: Mathjax Toggles
 hide_body: false
-is_partial: true
 fields:
 - type: boolean
   name: mathjax
